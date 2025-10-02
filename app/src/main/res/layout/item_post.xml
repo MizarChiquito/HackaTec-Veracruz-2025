@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/bg_card_mood"> <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivPostImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:contentDescription="Imagen del post"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8dp"
+        android:clickable="true"           android:focusable="true"          android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/tvPostTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/text_dark_mood"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toStartOf="@+id/ivLikeIcon"
+        app:layout_constraintStart_toEndOf="@+id/ivPostImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Título del Post que puede ser largo" />
+
+    <TextView
+        android:id="@+id/tvPostDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/text_secondary_mood"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintEnd_toEndOf="@+id/tvPostTitle"
+        app:layout_constraintStart_toEndOf="@+id/ivPostImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostTitle"
+        tools:text="Esta es una breve descripción del contenido del post que se cortará si es demasiado larga para evitar desbordamientos..." />
+
+    <ImageView
+        android:id="@+id/ivLikeIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPostTitle"
+        app:tint="@color/accent_mood"
+        android:contentDescription="Icono de 'Me Gusta'" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

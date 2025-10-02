@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_crema_claro"
+    tools:context=".Paquete1.Activity_post_detail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_dark_mood"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/text_light_mood"
+            android:contentDescription="Volver atrás"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:id="@+id/detail_title_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles del Post"
+            android:textColor="@color/text_light_mood"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_top_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/detail_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                android:background="@color/bg_placeholder_mood"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:contentDescription="Imagen detallada del post"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize12dp" />
+
+            <TextView
+                android:id="@+id/detail_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                tools:text="Gran Título del Post Destacado"
+                android:textColor="@color/text_dark_mood"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" /> <TextView
+            android:id="@+id/detail_post_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Esta es una descripción mucho más larga y detallada del post. Aquí se expandirá sobre el contenido principal, proporcionando más información, contexto y detalles relevantes. El texto fluirá naturalmente para llenar el espacio disponible, ofreciendo una lectura cómoda y atractiva para el usuario. Podría incluir varios párrafos para explicar en profundidad el tema."
+            android:textColor="@color/text_secondary_mood"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="sans-serif-light" /> <Button
+            android:id="@+id/detail_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="Más información"
+            android:textColor="@color/text_light_mood"
+            android:backgroundTint="@color/accent_mood"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:minHeight="48dp"
+            app:cornerRadius="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
