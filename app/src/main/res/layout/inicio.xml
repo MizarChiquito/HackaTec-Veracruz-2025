@@ -167,6 +167,17 @@
                 android:textColor="@color/text_light_mood"
                 android:textSize="12sp" />
         </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCreatePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add"
+            android:backgroundTint="@color/accent_mood"
+            app:tint="@color/text_light_mood"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="Crear nueva publicación"/>
 
     </LinearLayout>
 

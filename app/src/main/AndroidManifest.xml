@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HACKATECR6">
         <activity
+            android:name=".Paquete1.CreatePostActivity"
+            android:exported="false" />
+        <activity
             android:name=".Paquete1.Activity_post_detail"
             android:exported="false" />
         <activity
@@ -23,9 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Paquete1.PostDetailActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Paquete1.ProfileDetailActivity"
             android:exported="false" />

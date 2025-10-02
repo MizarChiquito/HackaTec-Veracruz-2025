@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_crema_claro"
+    tools:context=".Paquete1.CreatePostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_dark_mood"
+            app:title="Crear Nueva Publicación"
+            app:navigationIcon="@drawable/ic_close" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título de la Publicación"
+                android:textColor="@color/text_dark_mood"
+                android:textSize="16sp"
+                android:fontFamily="serif"/>
+
+            <EditText
+                android:id="@+id/etPostTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Ej: Busco libro de aventuras"
+                android:inputType="textCapSentences"
+                android:padding="16dp"
+                android:textColor="@color/text_dark_mood"
+                android:textColorHint="@color/text_secondary_mood" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="@color/text_dark_mood"
+                android:textSize="16sp"
+                android:fontFamily="serif"/>
+
+            <EditText
+                android:id="@+id/etPostDescription"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="top"
+                android:hint="Describe lo que ofreces o buscas..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="16dp"
+                android:textColor="@color/text_dark_mood"
+                android:textColorHint="@color/text_secondary_mood" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Añadir Imagen"
+                android:textColor="@color/text_dark_mood"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="serif"/>
+
+            <ImageView
+                android:id="@+id/ivImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/image_placeholder_background"
+                android:contentDescription="Vista previa de la imagen seleccionada"/>
+
+            <Button
+                android:id="@+id/btnPublishPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Publicar"
+                android:textColor="@color/text_light_mood"
+                android:backgroundTint="@color/accent_mood"
+                android:padding="16dp"
+                app:cornerRadius="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
